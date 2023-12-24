@@ -14,7 +14,12 @@
 		566A365D2B3845E000CD9DB1 /* GithubFollowersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A365C2B3845E000CD9DB1 /* GithubFollowersTests.swift */; };
 		566A36672B3845E000CD9DB1 /* GithubFollowersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A36662B3845E000CD9DB1 /* GithubFollowersUITests.swift */; };
 		566A36692B3845E000CD9DB1 /* GithubFollowersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A36682B3845E000CD9DB1 /* GithubFollowersUITestsLaunchTests.swift */; };
-		566A367D2B3848F500CD9DB1 /* MainTabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A367C2B3848F500CD9DB1 /* MainTabbarVC.swift */; };
+		566A36812B384A0400CD9DB1 /* ButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A36802B384A0400CD9DB1 /* ButtonSize.swift */; };
+		566A36832B384B2C00CD9DB1 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A36822B384B2C00CD9DB1 /* Theme.swift */; };
+		566A36852B384CB500CD9DB1 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A36842B384CB500CD9DB1 /* FontSize.swift */; };
+		566A36882B38573B00CD9DB1 /* Extension+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A36872B38573B00CD9DB1 /* Extension+UIFont.swift */; };
+		566A368A2B38581A00CD9DB1 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A36892B38581A00CD9DB1 /* SearchVC.swift */; };
+		566A368C2B386E1A00CD9DB1 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A368B2B386E1A00CD9DB1 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +51,12 @@
 		566A36622B3845E000CD9DB1 /* GithubFollowersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubFollowersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		566A36662B3845E000CD9DB1 /* GithubFollowersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubFollowersUITests.swift; sourceTree = "<group>"; };
 		566A36682B3845E000CD9DB1 /* GithubFollowersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubFollowersUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		566A367C2B3848F500CD9DB1 /* MainTabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarVC.swift; sourceTree = "<group>"; };
+		566A36802B384A0400CD9DB1 /* ButtonSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSize.swift; sourceTree = "<group>"; };
+		566A36822B384B2C00CD9DB1 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		566A36842B384CB500CD9DB1 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
+		566A36872B38573B00CD9DB1 /* Extension+UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIFont.swift"; sourceTree = "<group>"; };
+		566A36892B38581A00CD9DB1 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		566A368B2B386E1A00CD9DB1 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +144,7 @@
 		566A36762B3846AF00CD9DB1 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				566A367B2B3848B000CD9DB1 /* MainTabbar */,
-				566A367A2B3848A300CD9DB1 /* Home */,
+				566A367A2B3848A300CD9DB1 /* Search */,
 			);
 			name = Feature;
 			sourceTree = "<group>";
@@ -143,6 +152,9 @@
 		566A36772B3846B600CD9DB1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				566A36862B38572700CD9DB1 /* Extension */,
+				566A367F2B3849F600CD9DB1 /* Size */,
+				566A367E2B3849F100CD9DB1 /* Theme */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -157,19 +169,38 @@
 			name = Base;
 			sourceTree = "<group>";
 		};
-		566A367A2B3848A300CD9DB1 /* Home */ = {
+		566A367A2B3848A300CD9DB1 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				566A36892B38581A00CD9DB1 /* SearchVC.swift */,
+				566A368B2B386E1A00CD9DB1 /* SearchViewModel.swift */,
 			);
-			name = Home;
+			name = Search;
 			sourceTree = "<group>";
 		};
-		566A367B2B3848B000CD9DB1 /* MainTabbar */ = {
+		566A367E2B3849F100CD9DB1 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
-				566A367C2B3848F500CD9DB1 /* MainTabbarVC.swift */,
+				566A36822B384B2C00CD9DB1 /* Theme.swift */,
 			);
-			name = MainTabbar;
+			name = Theme;
+			sourceTree = "<group>";
+		};
+		566A367F2B3849F600CD9DB1 /* Size */ = {
+			isa = PBXGroup;
+			children = (
+				566A36802B384A0400CD9DB1 /* ButtonSize.swift */,
+				566A36842B384CB500CD9DB1 /* FontSize.swift */,
+			);
+			name = Size;
+			sourceTree = "<group>";
+		};
+		566A36862B38572700CD9DB1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				566A36872B38573B00CD9DB1 /* Extension+UIFont.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,9 +336,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				566A368A2B38581A00CD9DB1 /* SearchVC.swift in Sources */,
+				566A36882B38573B00CD9DB1 /* Extension+UIFont.swift in Sources */,
+				566A368C2B386E1A00CD9DB1 /* SearchViewModel.swift in Sources */,
 				566A36462B3845DE00CD9DB1 /* AppDelegate.swift in Sources */,
+				566A36852B384CB500CD9DB1 /* FontSize.swift in Sources */,
 				566A36482B3845DE00CD9DB1 /* SceneDelegate.swift in Sources */,
-				566A367D2B3848F500CD9DB1 /* MainTabbarVC.swift in Sources */,
+				566A36832B384B2C00CD9DB1 /* Theme.swift in Sources */,
+				566A36812B384A0400CD9DB1 /* ButtonSize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
