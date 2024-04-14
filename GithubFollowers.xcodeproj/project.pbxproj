@@ -17,9 +17,13 @@
 		564361482BCC14AD002F102B /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564361472BCC14AD002F102B /* Follower.swift */; };
 		5643614A2BCC14C3002F102B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564361492BCC14C3002F102B /* User.swift */; };
 		5643614C2BCC1963002F102B /* GFNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643614B2BCC1963002F102B /* GFNetworkError.swift */; };
-		564361502BCC1AA7002F102B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643614F2BCC1AA7002F102B /* SearchViewModel.swift */; };
 		564361532BCC1BBC002F102B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 564361522BCC1BBC002F102B /* SnapKit */; };
 		564361552BCC1BBC002F102B /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 564361542BCC1BBC002F102B /* SnapKit-Dynamic */; };
+		564361582BCC2DDF002F102B /* GFAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564361572BCC2DDF002F102B /* GFAlertViewController.swift */; };
+		5643615B2BCC300A002F102B /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643615A2BCC300A002F102B /* UIViewController+Extension.swift */; };
+		5643615E2BCC36E9002F102B /* FollowerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643615D2BCC36E9002F102B /* FollowerListViewController.swift */; };
+		564361612BCC3D8C002F102B /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564361602BCC3D8C002F102B /* MainTabbarController.swift */; };
+		564361642BCC3F4C002F102B /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564361632BCC3F4C002F102B /* FavoritesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +39,11 @@
 		564361472BCC14AD002F102B /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		564361492BCC14C3002F102B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5643614B2BCC1963002F102B /* GFNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFNetworkError.swift; sourceTree = "<group>"; };
-		5643614F2BCC1AA7002F102B /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		564361572BCC2DDF002F102B /* GFAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertViewController.swift; sourceTree = "<group>"; };
+		5643615A2BCC300A002F102B /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		5643615D2BCC36E9002F102B /* FollowerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewController.swift; sourceTree = "<group>"; };
+		564361602BCC3D8C002F102B /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
+		564361632BCC3F4C002F102B /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +78,10 @@
 		564361272BCBE7DE002F102B /* GithubFollowers */ = {
 			isa = PBXGroup;
 			children = (
-				5643613F2BCBEF01002F102B /* Model */,
+				564361562BCC2DC9002F102B /* CustomViews */,
+				564361592BCC2FFA002F102B /* Extension */,
 				5643613E2BCBEEF6002F102B /* Manager */,
+				5643613F2BCBEF01002F102B /* Model */,
 				5643613D2BCBEEDE002F102B /* Screen */,
 				5643613C2BCBE7E6002F102B /* Support */,
 			);
@@ -93,6 +103,9 @@
 		5643613D2BCBEEDE002F102B /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				564361622BCC3F3D002F102B /* Favorites */,
+				5643615C2BCC36D7002F102B /* FollowerList */,
+				5643615F2BCC3D6E002F102B /* MainTabbar */,
 				5643614E2BCC1A76002F102B /* Search */,
 			);
 			path = Screen;
@@ -119,8 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				564361412BCBEFD0002F102B /* GFEndpoint.swift */,
-				564361452BCBEFE2002F102B /* GFService.swift */,
 				5643614B2BCC1963002F102B /* GFNetworkError.swift */,
+				564361452BCBEFE2002F102B /* GFService.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -129,9 +142,48 @@
 			isa = PBXGroup;
 			children = (
 				5643612C2BCBE7DE002F102B /* SearchViewController.swift */,
-				5643614F2BCC1AA7002F102B /* SearchViewModel.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		564361562BCC2DC9002F102B /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				564361572BCC2DDF002F102B /* GFAlertViewController.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		564361592BCC2FFA002F102B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5643615A2BCC300A002F102B /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5643615C2BCC36D7002F102B /* FollowerList */ = {
+			isa = PBXGroup;
+			children = (
+				5643615D2BCC36E9002F102B /* FollowerListViewController.swift */,
+			);
+			path = FollowerList;
+			sourceTree = "<group>";
+		};
+		5643615F2BCC3D6E002F102B /* MainTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				564361602BCC3D8C002F102B /* MainTabbarController.swift */,
+			);
+			path = MainTabbar;
+			sourceTree = "<group>";
+		};
+		564361622BCC3F3D002F102B /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				564361632BCC3F4C002F102B /* FavoritesViewController.swift */,
+			);
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,13 +263,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				564361642BCC3F4C002F102B /* FavoritesViewController.swift in Sources */,
+				564361582BCC2DDF002F102B /* GFAlertViewController.swift in Sources */,
+				5643615B2BCC300A002F102B /* UIViewController+Extension.swift in Sources */,
+				564361612BCC3D8C002F102B /* MainTabbarController.swift in Sources */,
 				5643614C2BCC1963002F102B /* GFNetworkError.swift in Sources */,
+				5643615E2BCC36E9002F102B /* FollowerListViewController.swift in Sources */,
 				5643612D2BCBE7DE002F102B /* SearchViewController.swift in Sources */,
 				564361482BCC14AD002F102B /* Follower.swift in Sources */,
 				564361422BCBEFD0002F102B /* GFEndpoint.swift in Sources */,
 				564361292BCBE7DE002F102B /* AppDelegate.swift in Sources */,
 				564361462BCBEFE2002F102B /* GFService.swift in Sources */,
-				564361502BCC1AA7002F102B /* SearchViewModel.swift in Sources */,
 				5643612B2BCBE7DE002F102B /* SceneDelegate.swift in Sources */,
 				5643614A2BCC14C3002F102B /* User.swift in Sources */,
 			);
