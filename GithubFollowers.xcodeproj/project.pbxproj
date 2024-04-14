@@ -12,6 +12,11 @@
 		5643612D2BCBE7DE002F102B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643612C2BCBE7DE002F102B /* ViewController.swift */; };
 		564361322BCBE7DF002F102B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564361312BCBE7DF002F102B /* Assets.xcassets */; };
 		564361352BCBE7DF002F102B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 564361342BCBE7DF002F102B /* Base */; };
+		564361422BCBEFD0002F102B /* GFEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564361412BCBEFD0002F102B /* GFEndpoint.swift */; };
+		564361462BCBEFE2002F102B /* GFService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564361452BCBEFE2002F102B /* GFService.swift */; };
+		564361482BCC14AD002F102B /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564361472BCC14AD002F102B /* Follower.swift */; };
+		5643614A2BCC14C3002F102B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564361492BCC14C3002F102B /* User.swift */; };
+		5643614C2BCC1963002F102B /* GFNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643614B2BCC1963002F102B /* GFNetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		564361312BCBE7DF002F102B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		564361342BCBE7DF002F102B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		564361362BCBE7DF002F102B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		564361412BCBEFD0002F102B /* GFEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEndpoint.swift; sourceTree = "<group>"; };
+		564361452BCBEFE2002F102B /* GFService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFService.swift; sourceTree = "<group>"; };
+		564361472BCC14AD002F102B /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		564361492BCC14C3002F102B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5643614B2BCC1963002F102B /* GFNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFNetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,9 @@
 		564361272BCBE7DE002F102B /* GithubFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				5643613F2BCBEF01002F102B /* Model */,
+				5643613E2BCBEEF6002F102B /* Manager */,
+				5643613D2BCBEEDE002F102B /* Screen */,
 				5643613C2BCBE7E6002F102B /* Support */,
 				5643612C2BCBE7DE002F102B /* ViewController.swift */,
 			);
@@ -70,6 +83,40 @@
 				564361362BCBE7DF002F102B /* Info.plist */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		5643613D2BCBEEDE002F102B /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		5643613E2BCBEEF6002F102B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				564361402BCBEF6C002F102B /* NetworkManager */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		5643613F2BCBEF01002F102B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				564361472BCC14AD002F102B /* Follower.swift */,
+				564361492BCC14C3002F102B /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		564361402BCBEF6C002F102B /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				564361412BCBEFD0002F102B /* GFEndpoint.swift */,
+				564361452BCBEFE2002F102B /* GFService.swift */,
+				5643614B2BCC1963002F102B /* GFNetworkError.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +189,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5643614C2BCC1963002F102B /* GFNetworkError.swift in Sources */,
 				5643612D2BCBE7DE002F102B /* ViewController.swift in Sources */,
+				564361482BCC14AD002F102B /* Follower.swift in Sources */,
+				564361422BCBEFD0002F102B /* GFEndpoint.swift in Sources */,
 				564361292BCBE7DE002F102B /* AppDelegate.swift in Sources */,
+				564361462BCBEFE2002F102B /* GFService.swift in Sources */,
 				5643612B2BCBE7DE002F102B /* SceneDelegate.swift in Sources */,
+				5643614A2BCC14C3002F102B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,10 +343,12 @@
 				DEVELOPMENT_TEAM = SJ9HXADZ9T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GithubFollowers/Support/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +356,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MehmetAliOzdemir.GithubFollowers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -318,10 +376,12 @@
 				DEVELOPMENT_TEAM = SJ9HXADZ9T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GithubFollowers/Support/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -329,9 +389,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MehmetAliOzdemir.GithubFollowers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
