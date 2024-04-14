@@ -17,7 +17,7 @@ final class GFService: GFServiceProtocol {
     func request<T: Codable>(endpoint: Endpoint, completion: @escaping (Result<T, GFNetworkError>) -> Void) where T : Codable {
         guard let url = endpoint.url else { return }
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error {
+            if let _ = error {
                 completion(.failure(.invalidUsername))
                 return
             }
@@ -37,7 +37,7 @@ final class GFService: GFServiceProtocol {
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let decodedData = try decoder.decode(T.self, from: data)
                 completion(.success(decodedData))
-            } catch let error {
+            } catch {
                 completion(.failure(.invalidData))
             }
         }
