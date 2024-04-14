@@ -24,6 +24,11 @@
 		5643615E2BCC36E9002F102B /* FollowerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643615D2BCC36E9002F102B /* FollowerListViewController.swift */; };
 		564361612BCC3D8C002F102B /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564361602BCC3D8C002F102B /* MainTabbarController.swift */; };
 		564361642BCC3F4C002F102B /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564361632BCC3F4C002F102B /* FavoritesViewController.swift */; };
+		564361672BCC441E002F102B /* FollowerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564361662BCC441E002F102B /* FollowerListViewModel.swift */; };
+		564361692BCC4612002F102B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564361682BCC4612002F102B /* UIView+Extension.swift */; };
+		5643616C2BCC5152002F102B /* UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643616B2BCC5152002F102B /* UIHelpers.swift */; };
+		5643616F2BCC51D3002F102B /* FollowerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643616E2BCC51D3002F102B /* FollowerCollectionViewCell.swift */; };
+		564361722BCC7F3A002F102B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 564361712BCC7F3A002F102B /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +49,10 @@
 		5643615D2BCC36E9002F102B /* FollowerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewController.swift; sourceTree = "<group>"; };
 		564361602BCC3D8C002F102B /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
 		564361632BCC3F4C002F102B /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		564361662BCC441E002F102B /* FollowerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewModel.swift; sourceTree = "<group>"; };
+		564361682BCC4612002F102B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		5643616B2BCC5152002F102B /* UIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelpers.swift; sourceTree = "<group>"; };
+		5643616E2BCC51D3002F102B /* FollowerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				564361722BCC7F3A002F102B /* Kingfisher in Frameworks */,
 				564361532BCC1BBC002F102B /* SnapKit in Frameworks */,
 				564361552BCC1BBC002F102B /* SnapKit-Dynamic in Frameworks */,
 			);
@@ -78,6 +88,7 @@
 		564361272BCBE7DE002F102B /* GithubFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				5643616A2BCC5141002F102B /* Utilities */,
 				564361562BCC2DC9002F102B /* CustomViews */,
 				564361592BCC2FFA002F102B /* Extension */,
 				5643613E2BCBEEF6002F102B /* Manager */,
@@ -158,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				5643615A2BCC300A002F102B /* UIViewController+Extension.swift */,
+				564361682BCC4612002F102B /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -165,7 +177,9 @@
 		5643615C2BCC36D7002F102B /* FollowerList */ = {
 			isa = PBXGroup;
 			children = (
+				5643616D2BCC51C4002F102B /* Cell */,
 				5643615D2BCC36E9002F102B /* FollowerListViewController.swift */,
+				564361662BCC441E002F102B /* FollowerListViewModel.swift */,
 			);
 			path = FollowerList;
 			sourceTree = "<group>";
@@ -184,6 +198,22 @@
 				564361632BCC3F4C002F102B /* FavoritesViewController.swift */,
 			);
 			path = Favorites;
+			sourceTree = "<group>";
+		};
+		5643616A2BCC5141002F102B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5643616B2BCC5152002F102B /* UIHelpers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5643616D2BCC51C4002F102B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5643616E2BCC51D3002F102B /* FollowerCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +235,7 @@
 			packageProductDependencies = (
 				564361522BCC1BBC002F102B /* SnapKit */,
 				564361542BCC1BBC002F102B /* SnapKit-Dynamic */,
+				564361712BCC7F3A002F102B /* Kingfisher */,
 			);
 			productName = GithubFollowers;
 			productReference = 564361252BCBE7DE002F102B /* GithubFollowers.app */;
@@ -236,6 +267,7 @@
 			mainGroup = 5643611C2BCBE7DE002F102B;
 			packageReferences = (
 				564361512BCC1BBC002F102B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				564361702BCC7F39002F102B /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 564361262BCBE7DE002F102B /* Products */;
 			projectDirPath = "";
@@ -266,15 +298,19 @@
 				564361642BCC3F4C002F102B /* FavoritesViewController.swift in Sources */,
 				564361582BCC2DDF002F102B /* GFAlertViewController.swift in Sources */,
 				5643615B2BCC300A002F102B /* UIViewController+Extension.swift in Sources */,
+				564361692BCC4612002F102B /* UIView+Extension.swift in Sources */,
 				564361612BCC3D8C002F102B /* MainTabbarController.swift in Sources */,
 				5643614C2BCC1963002F102B /* GFNetworkError.swift in Sources */,
 				5643615E2BCC36E9002F102B /* FollowerListViewController.swift in Sources */,
 				5643612D2BCBE7DE002F102B /* SearchViewController.swift in Sources */,
+				5643616F2BCC51D3002F102B /* FollowerCollectionViewCell.swift in Sources */,
 				564361482BCC14AD002F102B /* Follower.swift in Sources */,
 				564361422BCBEFD0002F102B /* GFEndpoint.swift in Sources */,
 				564361292BCBE7DE002F102B /* AppDelegate.swift in Sources */,
+				5643616C2BCC5152002F102B /* UIHelpers.swift in Sources */,
 				564361462BCBEFE2002F102B /* GFService.swift in Sources */,
 				5643612B2BCBE7DE002F102B /* SceneDelegate.swift in Sources */,
+				564361672BCC441E002F102B /* FollowerListViewModel.swift in Sources */,
 				5643614A2BCC14C3002F102B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +546,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		564361702BCC7F39002F102B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -522,6 +566,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 564361512BCC1BBC002F102B /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		564361712BCC7F3A002F102B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 564361702BCC7F39002F102B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

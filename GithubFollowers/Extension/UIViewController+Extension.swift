@@ -16,4 +16,12 @@ extension UIViewController {
             self.present(alertVC, animated: true)
         }
     }
+    
+    var screenWidth: CGFloat {
+        return view.frame.size.width
+    }
+    
+    var screenHeight: CGFloat {
+        return view.frame.size.height
+    }
 }
