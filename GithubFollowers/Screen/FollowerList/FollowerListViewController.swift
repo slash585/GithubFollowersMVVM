@@ -100,4 +100,11 @@ extension FollowerListViewController: UICollectionViewDataSource, UICollectionVi
         cell.set(name: viewModel.followers[indexPath.item].login, imageUrl: viewModel.followers[indexPath.item].avatarUrl)
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = UserDetailViewController()
+        let navigationController = UINavigationController(rootViewController: UserDetailViewController())
+        vc.set(username: viewModel.followers[indexPath.item].login)
+        present(navigationController, animated: true)
+    }
 }

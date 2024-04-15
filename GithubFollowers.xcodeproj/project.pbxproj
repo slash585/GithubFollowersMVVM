@@ -29,6 +29,8 @@
 		5643616C2BCC5152002F102B /* UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643616B2BCC5152002F102B /* UIHelpers.swift */; };
 		5643616F2BCC51D3002F102B /* FollowerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643616E2BCC51D3002F102B /* FollowerCollectionViewCell.swift */; };
 		564361722BCC7F3A002F102B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 564361712BCC7F3A002F102B /* Kingfisher */; };
+		564361762BCC88E2002F102B /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564361752BCC88E2002F102B /* UserDetailViewController.swift */; };
+		564361782BCC8BA1002F102B /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564361772BCC8BA1002F102B /* UserDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		564361682BCC4612002F102B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		5643616B2BCC5152002F102B /* UIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelpers.swift; sourceTree = "<group>"; };
 		5643616E2BCC51D3002F102B /* FollowerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCollectionViewCell.swift; sourceTree = "<group>"; };
+		564361752BCC88E2002F102B /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		564361772BCC8BA1002F102B /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 		5643613D2BCBEEDE002F102B /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				564361742BCC88CD002F102B /* UserDetail */,
 				564361622BCC3F3D002F102B /* Favorites */,
 				5643615C2BCC36D7002F102B /* FollowerList */,
 				5643615F2BCC3D6E002F102B /* MainTabbar */,
@@ -216,6 +221,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		564361742BCC88CD002F102B /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				564361752BCC88E2002F102B /* UserDetailViewController.swift */,
+				564361772BCC8BA1002F102B /* UserDetailViewModel.swift */,
+			);
+			path = UserDetail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -297,10 +311,12 @@
 			files = (
 				564361642BCC3F4C002F102B /* FavoritesViewController.swift in Sources */,
 				564361582BCC2DDF002F102B /* GFAlertViewController.swift in Sources */,
+				564361762BCC88E2002F102B /* UserDetailViewController.swift in Sources */,
 				5643615B2BCC300A002F102B /* UIViewController+Extension.swift in Sources */,
 				564361692BCC4612002F102B /* UIView+Extension.swift in Sources */,
 				564361612BCC3D8C002F102B /* MainTabbarController.swift in Sources */,
 				5643614C2BCC1963002F102B /* GFNetworkError.swift in Sources */,
+				564361782BCC8BA1002F102B /* UserDetailViewModel.swift in Sources */,
 				5643615E2BCC36E9002F102B /* FollowerListViewController.swift in Sources */,
 				5643612D2BCBE7DE002F102B /* SearchViewController.swift in Sources */,
 				5643616F2BCC51D3002F102B /* FollowerCollectionViewCell.swift in Sources */,

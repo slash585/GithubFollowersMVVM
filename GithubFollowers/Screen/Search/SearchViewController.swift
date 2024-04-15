@@ -28,7 +28,7 @@ final class SearchViewController: UIViewController {
     
     private lazy var searchButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Let's go", for: .normal)
+        button.setTitle("Get Followers", for: .normal)
         button.backgroundColor = .systemGreen
         button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(handleTappedSearchButton), for: .touchUpInside)
@@ -80,7 +80,7 @@ final class SearchViewController: UIViewController {
         view.addSubview(searchButton)
         
         searchButton.snp.makeConstraints { make in
-            make.top.equalTo(searchTextField.snp.bottom).offset(16)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-32)
             make.left.equalToSuperview().offset(32)
             make.right.equalToSuperview().offset(-32)
             make.height.equalTo(50)
